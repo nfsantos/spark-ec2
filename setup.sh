@@ -18,7 +18,7 @@ rm -rf jdk1.8.0_65.tgz
 ~/spark-ec2/copy-dir /root/java
 
 echo "export JAVA_HOME=/root/java" >> .bash_profile
-echo "export PATH=\$JAVA_HOME/bin:\$PATH" >> .bash_profile
+echo "export PATH=\$JAVA_HOME/bin:\$SCALA_HOME/bin:\$PATH" >> .bash_profile
 
 ~/spark-ec2/copy-dir /root/.bash_profile
 
