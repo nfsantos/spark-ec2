@@ -43,6 +43,7 @@ SSH_OPTS="-o StrictHostKeyChecking=no -o ConnectTimeout=5"
 echo "Installing java"
 wget http://rawlabs-files.s3.amazonaws.com/jdk1.8.0_65.tgz
 tar zxvf jdk1.8.0_65.tgz
+mv jdk1.8.0_65 java
 rm -rf jdk1.8.0_65.tgz
 ~/spark-ec2/copy-dir /root/jdk1.8.0_65
 JAVA_HOME=/root/java
