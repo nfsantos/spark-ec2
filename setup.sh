@@ -45,7 +45,7 @@ wget http://rawlabs-files.s3.amazonaws.com/jdk1.8.0_65.tgz
 tar zxvf jdk1.8.0_65.tgz > /tmp/spark-ec2_java.log
 mv jdk1.8.0_65 java
 rm -rf jdk1.8.0_65.tgz
-~/spark-ec2/copy-dir /root/jdk1.8.0_65
+~/spark-ec2/copy-dir /root/java
 JAVA_HOME=/root/java
 #if [[ "x$JAVA_HOME" == "x" ]] ; then
 #    echo "Expected JAVA_HOME to be set in .bash_profile!"
