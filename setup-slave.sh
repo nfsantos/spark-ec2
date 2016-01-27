@@ -11,6 +11,7 @@ fi
 pushd /root/spark-ec2 > /dev/null
 
 source ec2-variables.sh
+source /root/.bash_profile
 
 # Set hostname based on EC2 private DNS name, so that it is set correctly
 # even if the instance is restarted with a different private DNS name
