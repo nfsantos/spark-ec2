@@ -136,5 +136,5 @@ echo '* hard nofile 1000000' >> /etc/security/limits.conf
 
 
 rm /usr/bin/java
-ln -s /root/java/bin/java /usr/binjava
+ln -s /root/java/bin/java /usr/bin/java
 
