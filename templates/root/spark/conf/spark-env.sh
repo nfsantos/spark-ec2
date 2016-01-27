@@ -29,3 +29,9 @@ if [ $(id -u) == "0" ]
 then
     ulimit -n 1000000
 fi
+
+# Custom
+SPARK_LOG_DIR=/var/logs/spark
+SPARK_WORKER_CORES=1
+
+
