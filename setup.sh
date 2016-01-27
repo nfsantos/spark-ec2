@@ -10,16 +10,9 @@ echo_time_diff () {
   echo "[timing] $1: " "$(date -u -d@"$diff_secs" +"$format")"
 }
 
-echo "Installing java"
-wget http://rawlabs-files.s3.amazonaws.com/jdk1.8.0_65.tgz
-tar zxvf jdk1.8.0_65.tgz > /tmp/spark-ec2_java.log
-mv jdk1.8.0_65 java
-rm -rf jdk1.8.0_65.tgz
-~/spark-ec2/copy-dir /root/java
 
 echo "export JAVA_HOME=/root/java" >> .bash_profile
 echo "export PATH=\$JAVA_HOME/bin:\$SCALA_HOME/bin:\$PATH" >> .bash_profile
-
 ~/spark-ec2/copy-dir /root/.bash_profile
 
 # Make sure we are in the spark-ec2 directory
@@ -50,6 +43,13 @@ NUM_MASTERS=`cat masters | wc -l`
 OTHER_MASTERS=`cat masters | sed '1d'`
 SLAVES=`cat slaves`
 SSH_OPTS="-o StrictHostKeyChecking=no -o ConnectTimeout=5"
+
+echo "Installing java"
+wget http://rawlabs-files.s3.amazonaws.com/jdk1.8.0_65.tgz
+tar zxvf jdk1.8.0_65.tgz > /tmp/spark-ec2_java.log
+mv jdk1.8.0_65 /root/java
+rm -rf jdk1.8.0_65.tgz
+~/spark-ec2/copy-dir /root/java
 
 if [[ "x$JAVA_HOME" == "x" ]] ; then
     echo "Expected JAVA_HOME to be set in .bash_profile!"
