@@ -33,5 +33,5 @@ fi
 # Custom
 SPARK_LOG_DIR=/var/logs/spark
 SPARK_WORKER_CORES=1
-
+SPARK_WORKER_DIR=/tmp/spark-worker
 
