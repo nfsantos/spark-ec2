@@ -133,3 +133,8 @@ popd > /dev/null
 # this is to set the ulimit for root and other users
 echo '* soft nofile 1000000' >> /etc/security/limits.conf
 echo '* hard nofile 1000000' >> /etc/security/limits.conf
+
+
+rm /usr/bin/java
+ln -s /root/java/bin/java /usr/binjava
+
