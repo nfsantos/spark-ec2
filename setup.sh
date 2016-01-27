@@ -10,10 +10,8 @@ echo_time_diff () {
   echo "[timing] $1: " "$(date -u -d@"$diff_secs" +"$format")"
 }
 
-
 echo "export JAVA_HOME=/root/java" >> .bash_profile
 echo "export PATH=\$JAVA_HOME/bin:\$SCALA_HOME/bin:\$PATH" >> .bash_profile
-~/spark-ec2/copy-dir /root/.bash_profile
 
 # Make sure we are in the spark-ec2 directory
 pushd /root/spark-ec2 > /dev/null
@@ -43,6 +41,8 @@ NUM_MASTERS=`cat masters | wc -l`
 OTHER_MASTERS=`cat masters | sed '1d'`
 SLAVES=`cat slaves`
 SSH_OPTS="-o StrictHostKeyChecking=no -o ConnectTimeout=5"
+
+~/spark-ec2/copy-dir /root/.bash_profile
 
 echo "Installing java"
 wget http://rawlabs-files.s3.amazonaws.com/jdk1.8.0_65.tgz
