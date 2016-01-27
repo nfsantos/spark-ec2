@@ -115,6 +115,9 @@ echo "Deploying Spark config files..."
 chmod u+x /root/spark/conf/spark-env.sh
 /root/spark-ec2/copy-dir /root/spark/conf
 
+mkdir /tmp/spark-worker
+~/spark-ec2/copy-dir /tmp/spark-worker
+
 # Setup each module
 for module in $MODULES; do
   echo "Setting up $module"
