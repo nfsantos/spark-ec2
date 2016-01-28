@@ -31,7 +31,7 @@ then
 fi
 
 # Custom
-SPARK_LOG_DIR=/var/logs/spark
+SPARK_LOG_DIR=/var/log/spark
 SPARK_WORKER_CORES=1
 SPARK_WORKER_DIR=/tmp/spark-worker
 SPARK_CLASSPATH="$SPARK_HOME/lib/hadoop-aws-2.6.0.jar:$SPARK_HOME/lib/aws-java-sdk-core-1.10.49.jar:$SPARK_HOME/lib/aws-java-sdk-s3-1.10.49.jar:$SPARK_HOME/lib/guava-15.0.jar"
