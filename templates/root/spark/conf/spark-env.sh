@@ -32,6 +32,6 @@ fi
 
 # Custom
 SPARK_LOG_DIR=/var/log/spark
-SPARK_WORKER_CORES=1
+SPARK_WORKER_CORES=16
 SPARK_WORKER_DIR=/tmp/spark-worker
 SPARK_CLASSPATH="$SPARK_HOME/lib/hadoop-aws-2.6.0.jar:$SPARK_HOME/lib/aws-java-sdk-core-1.10.49.jar:$SPARK_HOME/lib/aws-java-sdk-s3-1.10.49.jar:$SPARK_HOME/lib/guava-15.0.jar:$SPARK_HOME/lib/spark-csv_2.11-1.3.0.jar:$SPARK_HOME/lib/univocity-parsers-1.5.1.jar:$SPARK_HOME/lib/commons-csv-1.1.jar"
