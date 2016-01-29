@@ -2,6 +2,9 @@
 
 pushd /root > /dev/null
 
+# Force installation of spark
+rm -rf spark
+
 if [ -d "spark" ]; then
   echo "Spark seems to be installed. Exiting."
   return
